@@ -1,6 +1,6 @@
 Name:       python-neutronclient
 Version:    2.2.6
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Python API and CLI for OpenStack Neutron
 
 Group:      Development/Languages
@@ -9,7 +9,7 @@ URL:        http://launchpad.net/python-neutronclient/
 Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
 
 #
-# patches_base=2.2.4
+# patches_base=2.2.6
 #
 Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
 
@@ -40,10 +40,6 @@ Neutron's API.
 # We provide version like this in order to remove runtime dep on pbr.
 sed -i s/REDHATNEUTRONCLIENTVERSION/%{version}/ neutronclient/version.py
 
-# let RPM handle dependencies
-: > requirements.txt
-: > test-requirements.txt
-
 %build
 %{__python} setup.py build
 
@@ -66,6 +62,9 @@ rm -rf %{buildroot}%{python_sitelib}/neutronclient/tests
 %{_sysconfdir}/bash_completion.d
 
 %changelog
+* Wed Aug 28 2013 Jakub Ruzicka <jruzicka@redhat.com> - 2.2.6-2
+- Remove all pbr deps in the patch instead of this spec file.
+
 * Wed Aug 21 2013 Jakub Ruzicka <jruzicka@redhat.com> - 2.2.6-1
 - Update to upstream 2.2.6.
 

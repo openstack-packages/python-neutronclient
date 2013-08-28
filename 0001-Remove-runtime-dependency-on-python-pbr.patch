@@ -1,11 +1,16 @@
-From c17f0b042d32c970afae6884a05c3df05642501f Mon Sep 17 00:00:00 2001
+From ce71a381eeb4316de01b4cc4ce04f756e4a4107a Mon Sep 17 00:00:00 2001
 From: Jakub Ruzicka <jruzicka@redhat.com>
 Date: Tue, 23 Jul 2013 18:35:38 +0200
 Subject: [PATCH] Remove runtime dependency on python-pbr.
 
 ---
- neutronclient/version.py | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
+ neutronclient/version.py |  5 +----
+ requirements.txt         |  6 ------
+ setup.py                 |  1 -
+ test-requirements.txt    | 15 ---------------
+ 4 files changed, 1 insertion(+), 26 deletions(-)
+ delete mode 100644 requirements.txt
+ delete mode 100644 test-requirements.txt
 
 diff --git a/neutronclient/version.py b/neutronclient/version.py
 index 9315671..f0b6efc 100644
@@ -20,3 +25,46 @@ index 9315671..f0b6efc 100644
 -
 -__version__ = pbr.version.VersionInfo('python-neutronclient').version_string()
 +__version__ = "REDHATNEUTRONCLIENTVERSION"
+diff --git a/requirements.txt b/requirements.txt
+deleted file mode 100644
+index fd898c0..0000000
+--- a/requirements.txt
++++ /dev/null
+@@ -1,6 +0,0 @@
+-pbr>=0.5.16,<0.6
+-argparse
+-cliff>=1.4
+-httplib2
+-iso8601>=0.1.4
+-simplejson>=2.0.9
+diff --git a/setup.py b/setup.py
+index 15f4e9d..afab729 100644
+--- a/setup.py
++++ b/setup.py
+@@ -18,5 +18,4 @@
+ import setuptools
+ 
+ setuptools.setup(
+-    setup_requires=['pbr>=0.5.20'],
+     pbr=True)
+diff --git a/test-requirements.txt b/test-requirements.txt
+deleted file mode 100644
+index 1089218..0000000
+--- a/test-requirements.txt
++++ /dev/null
+@@ -1,15 +0,0 @@
+-# Install bounded pep8/pyflakes first, then let flake8 install
+-pep8==1.4.5
+-pyflakes==0.7.2
+-flake8==2.0
+-hacking>=0.5.6,<0.7
+-
+-cliff-tablib>=1.0
+-coverage>=3.6
+-discover
+-fixtures>=0.3.12
+-mox>=0.5.3
+-python-subunit
+-sphinx>=1.1.2
+-testrepository>=0.0.17
+-testtools>=0.9.32
