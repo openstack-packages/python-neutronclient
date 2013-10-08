@@ -1,7 +1,7 @@
-From 5262fcb75f2a48cac5844ab3c231710f46a4495b Mon Sep 17 00:00:00 2001
+From 29386e4f4042b22d0ce2cadd0c2b381b42f52c46 Mon Sep 17 00:00:00 2001
 From: Jakub Ruzicka <jruzicka@redhat.com>
 Date: Tue, 23 Jul 2013 18:35:38 +0200
-Subject: [PATCH] Remove runtime dependency on python-pbr.
+Subject: [PATCH] Remove runtime dependency on python-pbr
 
 ---
  neutronclient/version.py |  5 +----
@@ -27,13 +27,13 @@ index 9315671..f0b6efc 100644
 +__version__ = "REDHATNEUTRONCLIENTVERSION"
 diff --git a/requirements.txt b/requirements.txt
 deleted file mode 100644
-index 8871885..0000000
+index 22e6b09..0000000
 --- a/requirements.txt
 +++ /dev/null
 @@ -1,8 +0,0 @@
 -pbr>=0.5.21,<1.0
 -argparse
--cliff>=1.4
+-cliff>=1.4.3
 -httplib2
 -iso8601>=0.1.4
 -simplejson>=2.0.9
