@@ -1,6 +1,6 @@
 Name:       python-neutronclient
 Version:    2.3.1
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Python API and CLI for OpenStack Neutron
 
 Group:      Development/Languages
@@ -12,8 +12,6 @@ Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}
 # patches_base=2.3.1
 #
 Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
-
-Obsoletes:  python-quantumclient < 2:2.2.4
 
 BuildArch:  noarch
 
@@ -62,6 +60,9 @@ rm -rf %{buildroot}%{python_sitelib}/neutronclient/tests
 %{_sysconfdir}/bash_completion.d
 
 %changelog
+* Fri Nov 01 2013 Jakub Ruzicka <jruzicka@redhat.com> - 2.3.1-2
+- Don't obsolete python-quantumclient (#1025509)
+
 * Tue Oct 08 2013 Jakub Ruzicka <jruzicka@redhat.com> - 2.3.1-1
 - Update to upstream 2.3.1.
 
