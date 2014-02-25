@@ -1,5 +1,5 @@
 Name:       python-neutronclient
-Version:    2.3.3
+Version:    2.3.4
 Release:    1%{?dist}
 Summary:    Python API and CLI for OpenStack Neutron
 
@@ -9,7 +9,7 @@ URL:        http://launchpad.net/python-neutronclient/
 Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
 
 #
-# patches_base=2.3.3
+# patches_base=2.3.4
 #
 Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
 
@@ -63,6 +63,9 @@ rm -rf %{buildroot}%{python_sitelib}/neutronclient/tests
 %{_sysconfdir}/bash_completion.d
 
 %changelog
+* Tue Feb 25 2014 Jakub Ruzicka <jruzicka@redhat.com> 2.3.4-1
+- Update to upstream 2.3.4
+
 * Mon Jan 13 2014 Jakub Ruzicka <jruzicka@redhat.com> 2.3.3-1
 - Update to upstream 2.3.3
 

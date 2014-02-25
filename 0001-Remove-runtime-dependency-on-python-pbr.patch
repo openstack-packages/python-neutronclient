@@ -1,4 +1,4 @@
-From 23f1d700a37eced5fb33cc75b7b64ae5a3b0f0c9 Mon Sep 17 00:00:00 2001
+From 5f501ec8705bd8dbe48ee1c528f3953cd6fac850 Mon Sep 17 00:00:00 2001
 From: Jakub Ruzicka <jruzicka@redhat.com>
 Date: Tue, 23 Jul 2013 18:35:38 +0200
 Subject: [PATCH] Remove runtime dependency on python-pbr
