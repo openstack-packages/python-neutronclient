@@ -1,6 +1,6 @@
 Name:       python-neutronclient
 Version:    2.3.4
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Python API and CLI for OpenStack Neutron
 
 Group:      Development/Languages
@@ -63,6 +63,9 @@ rm -rf %{buildroot}%{python_sitelib}/neutronclient/tests
 %{_sysconfdir}/bash_completion.d
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.3.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Tue Feb 25 2014 Jakub Ruzicka <jruzicka@redhat.com> 2.3.4-1
 - Update to upstream 2.3.4
 
