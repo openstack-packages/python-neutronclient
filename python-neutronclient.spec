@@ -31,7 +31,8 @@ Client library and command line utility for interacting with Openstack
 Neutron's API.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
+
 
 %patch0001 -p1
 
