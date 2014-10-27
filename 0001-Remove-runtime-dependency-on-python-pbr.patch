@@ -1,4 +1,4 @@
-From 95ab4d4d262b5b7c86347fa451e3eba3b3705dbb Mon Sep 17 00:00:00 2001
+From 79d5377231eca13ace6a386f6e878629e445c6cc Mon Sep 17 00:00:00 2001
 From: Jakub Ruzicka <jruzicka@redhat.com>
 Date: Tue, 23 Jul 2013 18:35:38 +0200
 Subject: [PATCH] Remove runtime dependency on python-pbr
@@ -9,11 +9,11 @@ Subject: [PATCH] Remove runtime dependency on python-pbr
  2 files changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/neutronclient/version.py b/neutronclient/version.py
-index 9315671..f0b6efc 100644
+index 1899900..facbd6b 100644
 --- a/neutronclient/version.py
 +++ b/neutronclient/version.py
-@@ -16,7 +16,4 @@
- # vim: tabstop=4 shiftwidth=4 softtabstop=4
+@@ -15,7 +15,4 @@
+ #
  # @author: Carl Baldwin, Hewlett-Packard
  
 -import pbr.version
