@@ -1,9 +1,8 @@
 Name:       python-neutronclient
-Version:    2.3.11
-Release:    1%{?dist}
+Version:    XXX
+Release:    XXX
 Summary:    Python API and CLI for OpenStack Neutron
 
-Group:      Development/Languages
 License:    ASL 2.0
 URL:        http://launchpad.net/python-neutronclient/
 Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
@@ -39,10 +38,10 @@ Neutron's API.
 rm -f test-requirements.txt requirements.txt
 
 %build
-%{__python} setup.py build
+%{__python2} setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
 # Install other needed files
 install -p -D -m 644 tools/neutron.bash_completion \
@@ -52,11 +51,11 @@ install -p -D -m 644 tools/neutron.bash_completion \
 rm -rf %{buildroot}%{python_sitelib}/neutronclient/tests
 
 %files
-%doc LICENSE
+%license LICENSE
 %doc README.rst
 %{_bindir}/neutron
-%{python_sitelib}/neutronclient
-%{python_sitelib}/*.egg-info
+%{python2_sitelib}/neutronclient
+%{python2_sitelib}/*.egg-info
 %{_sysconfdir}/bash_completion.d
 
 %changelog
