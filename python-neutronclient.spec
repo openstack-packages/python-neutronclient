@@ -28,7 +28,7 @@ Requires: python-six >= 1.9.0
 
 
 %description
-Client library and command line utility for interacting with Openstack
+Client library and command line utility for interacting with OpenStack
 Neutron's API.
 
 %prep
