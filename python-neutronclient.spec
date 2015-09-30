@@ -12,19 +12,19 @@ BuildArch:  noarch
 BuildRequires: python2-devel
 BuildRequires: python-setuptools
 BuildRequires: python-pbr
-BuildRequires: python-d2to1
 
-Requires: pyparsing
-Requires: python-cliff >= 1.0
-Requires: python-keystoneclient >= 0.9.0
-Requires: python-oslo-i18n
-Requires: python-oslo-serialization
-Requires: python-oslo-utils
+Requires: python-babel >= 1.3
+Requires: python-cliff >= 1.14.0
+Requires: python-iso8601 >= 0.1.9
+Requires: python-keystoneclient >= 1.6.0
+Requires: python-netaddr >= 0.7.12
+Requires: python-oslo-i18n >= 1.5.0
+Requires: python-oslo-serialization >= 1.4.0
+Requires: python-oslo-utils >= 2.0.0
 Requires: python-pbr
-Requires: python-prettytable >= 0.6
-Requires: python-requests
-Requires: python-setuptools
-Requires: python-simplejson
+Requires: python-requests >= 2.5.2
+Requires: python-simplejson >= 2.2.0
+Requires: python-six >= 1.9.0
 
 
 %description
