@@ -1,11 +1,12 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:       python-neutronclient
-Version:    XXX
-Release:    XXX
+Version:    4.1.1
+Release:    1%{?dist}
 Summary:    Python API and CLI for OpenStack Neutron
 
 License:    ASL 2.0
 URL:        http://launchpad.net/python-neutronclient/
-Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
+Source0:    https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}%{?milestone}.tar.gz
 
 BuildArch:  noarch
 
@@ -74,3 +75,5 @@ install -p -D -m 644 tools/neutron.bash_completion \
 %{python2_sitelib}/neutronclient/tests
 
 %changelog
+* Wed Mar 23 2016 RDO <rdo-list@redhat.com> 4.1.1-0.1
+-  Rebuild for Mitaka 4.1.1
