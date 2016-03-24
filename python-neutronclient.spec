@@ -18,6 +18,7 @@ Requires: python-cliff >= 1.14.0
 Requires: python-iso8601 >= 0.1.9
 Requires: python-keystoneclient >= 1.6.0
 Requires: python-netaddr >= 0.7.12
+Requires: python-os-client-config >= 1.13.1
 Requires: python-oslo-i18n >= 1.5.0
 Requires: python-oslo-serialization >= 1.4.0
 Requires: python-oslo-utils >= 2.0.0
